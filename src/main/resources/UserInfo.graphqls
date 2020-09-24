@@ -1,0 +1,16 @@
+schema {
+query: Query
+}
+
+type Query{
+ getUserInfoByID(id: String):UserInfo
+}
+
+type UserInfo{
+id:String
+firstName: String
+lastName: String
+userName: String
+emailAddress: String
+password: String
+}

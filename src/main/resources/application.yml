@@ -1,0 +1,19 @@
+spring:
+  data:
+    cassandra:
+      port: 9042
+      keyspace-name: user_login_signup
+      contact-points: localhost
+      local-datacenter: datacenter1
+
+graphql:
+  servlet:
+    mapping: /graphql
+    enabled: true
+    corsEnabled: true
+
+graphiql:
+  mapping: /graphiql
+  endpoint: /graphql
+  enabled: true
+  pageTitle: graphiql

@@ -3,9 +3,8 @@ package com.aditya.login.service.LoginService.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.cassandra.core.cql.PrimaryKeyType;
 import org.springframework.data.cassandra.core.mapping.Column;
-import org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn;
+import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.Table;
 
 import java.io.Serializable;
@@ -14,10 +13,10 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table("User")
-public class User implements Serializable {
+@Table("UserInfo")
+public class UserInfo implements Serializable {
 
-    @PrimaryKeyColumn(name="ID", type = PrimaryKeyType.PARTITIONED)
+    @PrimaryKey("ID")
     private String id;
 
     @Column("FirstName")
