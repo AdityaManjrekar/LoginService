@@ -9,6 +9,7 @@ import org.springframework.data.cassandra.core.mapping.Table;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.UUID;
 
 @Data
 @NoArgsConstructor
@@ -16,8 +17,8 @@ import java.util.Date;
 @Table("UserInfo")
 public class UserInfo implements Serializable {
 
-    @PrimaryKey("ID")
-    private String id;
+    @Column("ID")
+    private UUID id;
 
     @Column("FirstName")
     private String firstName;
@@ -25,7 +26,7 @@ public class UserInfo implements Serializable {
     @Column("LastName")
     private String lastName;
 
-    @Column("UserName")
+    @PrimaryKey("UserName")
     private String userName;
 
     @Column("EmailAddress")

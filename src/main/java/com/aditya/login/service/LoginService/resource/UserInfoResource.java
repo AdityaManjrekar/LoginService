@@ -15,4 +15,6 @@ public class UserInfoResource implements GraphQLQueryResolver {
     public UserInfo getUserInfoByID(String id){
         return userInfoRepository.findById(Long.parseLong(id)).get();
     }
+
+
 }

@@ -1,12 +1,22 @@
-schema {
-query: Query
-}
 
 type Query{
  getUserInfoByID(id: String):UserInfo
 }
+type Mutation {
+    saveUserInfo(userInfo: UserInfoInput):UserInfo
+}
 
 type UserInfo{
+id:String
+firstName: String
+lastName: String
+userName: String
+emailAddress: String
+password: String
+}
+
+
+input UserInfoInput{
 id:String
 firstName: String
 lastName: String
